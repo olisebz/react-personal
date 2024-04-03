@@ -6,19 +6,17 @@ module.exports = {
     extend: {
       colors: {
         "deep-blue": "#010026",
-        blue: "#2CBCE9",
+        blue: "#2563eb",
         red: "#DC4492",
-        yellow: "#FDCC49",
+        green: "#4ade80",
         grey: "#ededed",
+        purple: "#7c3aed",
         "dark-grey": "#757575",
         "opaque-black": "rgba(0,0,0,0.35)",
       },
       backgroundImage: (theme) => ({
-        "gradient-rainbow":
-          "linear-gradient(81.66deg, #00B5EE 7.21%, #FF45A4 45.05%, #FFBA00 78.07%)",
-
-        "gradient-rainblue":
-          "linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 117.73%)",
+        "gradient-violet":
+          "linear-gradient(81.66deg, theme('colors.violet.600') 7.21%, theme('colors.violet.600') 45.05%, theme('colors.violet.600') 78.07%)",
       }),
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
