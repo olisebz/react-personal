@@ -10,6 +10,27 @@ const Landing = ({ setSelectedPage }) => {
       id="home"
       className="md:flex md:justify-between md:items-center gap-16 md:h-full py-10"
     >
+      {/* IMAGE SECTION */}
+<div className="basis-3/5 z-10 mt-16 md:mt-32 flex justify-center md:order-2">
+  {isAboveLarge ? (
+    <div className="relative z-0 mr-20 before:absolute before:-top-20 before:-right-20
+      before:w-full before:max-w-[250px] md:before:max-w-[350px] before:h-full before:border-4 before:border-purple before:z-[-1]">
+      <img
+        alt="profile"
+        className="z-10 w-full max-w-[250px] md:max-w-[350px] rounded-lg shadow-2xl border-4 border-transparent border-purple blur-sm
+        hover:border-blue transition duration-700 hover:blur-none"
+        src="assets/profile-image.png"
+      />
+    </div>
+  ) : (
+    <img
+      alt="profile"
+      className="z-10 w-full max-w-[250px] md:max-w-[350px] rounded-lg shadow-2xl border-4 border-transparent border-purple hover:border-blue transition duration-700"
+      src="assets/profile-image.png"
+    />
+  )}
+</div>
+
 
       {/* MAIN TEXT */}
       <div className="z-30 basis-2/5 mt-12 md:mt-32">
