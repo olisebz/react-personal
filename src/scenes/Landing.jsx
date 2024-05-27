@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
@@ -5,20 +6,34 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Landing = ({ setSelectedPage }) => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    // Do nothing to keep the image unblurred
+  };
+
   return (
     <section
       id="home"
       className="md:flex md:justify-between md:items-center gap-16 md:h-full py-10"
     >
       {/* IMAGE SECTION */}
-<div className="basis-3/5 z-10 mt-16 md:mt-32 flex justify-center md:order-2">
+      <div className="basis-3/5 z-10 mt-16 md:mt-32 flex justify-center md:order-2">
   {isAboveLarge ? (
-    <div className="relative z-0 mr-20 before:absolute before:-top-20 before:-right-20
-      before:w-full before:max-w-[250px] md:before:max-w-[350px] before:h-full before:border-4 before:border-purple before:z-[-1]">
+    <div
+      className={`relative z-0 mr-20 before:absolute before:-top-20 before:-right-20
+        before:w-full before:max-w-[250px] md:before:max-w-[350px] before:h-full before:border-4 before:border-purple before:z-[-1]
+        ${isHovered ? 'before:border-blue' : ''}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <img
         alt="profile"
-        className="z-10 w-full max-w-[250px] md:max-w-[350px] rounded-lg shadow-2xl border-4 border-transparent border-purple blur-sm
-        hover:border-blue transition duration-700 hover:blur-none"
+        className={`z-10 w-full max-w-[250px] md:max-w-[350px] rounded-lg shadow-2xl border-4 border-transparent border-purple transition duration-700 ${isHovered ? 'blur-none border-blue' : 'blur-sm'}`}
         src="assets/profile-image.png"
       />
     </div>
@@ -46,13 +61,7 @@ const Landing = ({ setSelectedPage }) => {
           }}
         >
           <p className="text-6xl font-playfair z-10 text-center md:text-start">
-            Oliver {""}
-            <span
-              className="xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
-              before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]"
-            >
-              Zenger
-            </span>
+            Oliver {""} Zenger
           </p>
 
           <p className="mt-10 mb-7 text-sm text-center md:text-start">
