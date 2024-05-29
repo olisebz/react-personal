@@ -19,7 +19,7 @@ I have programmed a small React one-page application as a homepage. This project
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/react-personal-homepage.git
+   git clone https://github.com/olisebz/react-personal.git
    ```
 2. Navigate to the project directory:
    ```sh
