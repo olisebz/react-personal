@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
@@ -13,7 +13,6 @@ const Landing = ({ setSelectedPage }) => {
   };
 
   const handleMouseLeave = () => {
-    // Do nothing to keep the image unblurred
   };
 
   return (
