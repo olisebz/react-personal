@@ -8,30 +8,72 @@ import javaIcon from "../assets/skills/java.svg";
 import reactIcon from "../assets/skills/react.svg";
 import springBootIcon from "../assets/skills/spring-boot.svg";
 
-
-
-// Importiere hier weitere Icons
+// Import additional icons here
 
 const skills = [
   { name: "Angular", icon: angularIcon },
   { name: "Bootstrap", icon: bootstrapIcon },
-  { name: "CSS", icon: cssIcon }, // Hinzugefügt
-  { name: "HTML", icon: htmlIcon }, // Hinzugefügt
-  { name: "JavaScript", icon: javascriptIcon }, // Hinzugefügt
-  { name: "Java", icon: javaIcon }, // Hinzugefügt
-  { name: "React", icon: reactIcon }, // Vorhanden
-  { name: "Spring Boot", icon: springBootIcon }, // Hinzugefügt
+  { name: "CSS", icon: cssIcon }, // Added
+  { name: "HTML", icon: htmlIcon }, // Added
+  { name: "JavaScript", icon: javascriptIcon }, // Added
+  { name: "Java", icon: javaIcon }, // Added
+  { name: "React", icon: reactIcon }, // Existing
+  { name: "Spring Boot", icon: springBootIcon }, // Added
 ];
+
+const backendSkills = skills.filter((skill) =>
+  ["Java", "Spring Boot"].includes(skill.name)
+);
+
+const frontendSkills = skills.filter((skill) =>
+  ["Angular", "Bootstrap", "CSS", "HTML", "JavaScript", "React"].includes(
+    skill.name
+  )
+);
+
+const toolsSkills = skills.filter(
+  (skill) =>
+    !["Java", "Spring Boot", "Angular", "Bootstrap", "CSS", "HTML", "JavaScript", "React"].includes(
+      skill.name
+    )
+);
 
 const SkillSet = () => {
   return (
-    <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
-      {skills.map((skill, index) => (
-        <div key={index} className="flex flex-col items-center">
-          <img src={skill.icon} alt={skill.name} className="w-20 h-20" />
-          <p className="mt-2 text-center">{skill.name}</p>
+    <div className="flex justify-center space-x-10 py-10">
+      <div className="text-center">
+        <h2 className="text-2xl font-bold mb-4">Backend</h2>
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+          {backendSkills.map((skill, index) => (
+            <div key={index} className="flex flex-col items-center hover:bg-deep-blue-ligher rounded-lg p-4">
+              <img src={skill.icon} alt={skill.name} className="w-16 h-16 mb-2" />
+              <p className="text-lg font-medium">{skill.name}</p>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
+      <div className="text-center">
+        <h2 className="text-2xl font-bold mb-4">Frontend</h2>
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+          {frontendSkills.map((skill, index) => (
+            <div key={index} className="flex flex-col items-center hover:bg-deep-blue-ligher rounded-lg p-4">
+              <img src={skill.icon} alt={skill.name} className="w-16 h-16 mb-2" />
+              <p className="text-lg font-medium">{skill.name}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="text-center">
+        <h2 className="text-2xl font-bold mb-4">Tools</h2>
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+          {toolsSkills.map((skill, index) => (
+            <div key={index} className="flex flex-col items-center hover:bg-deep-blue-ligher rounded-lg p-4">
+              <img src={skill.icon} alt={skill.name} className="w-16 h-16 mb-2" />
+              <p className="text-lg font-medium">{skill.name}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
