@@ -8,17 +8,16 @@ import javaIcon from "../assets/skills/java.svg";
 import reactIcon from "../assets/skills/react.svg";
 import springBootIcon from "../assets/skills/spring-boot.svg";
 
-// Import additional icons here
 
 const skills = [
   { name: "Angular", icon: angularIcon },
   { name: "Bootstrap", icon: bootstrapIcon },
-  { name: "CSS", icon: cssIcon }, // Added
-  { name: "HTML", icon: htmlIcon }, // Added
-  { name: "JavaScript", icon: javascriptIcon }, // Added
-  { name: "Java", icon: javaIcon }, // Added
-  { name: "React", icon: reactIcon }, // Existing
-  { name: "Spring Boot", icon: springBootIcon }, // Added
+  { name: "CSS", icon: cssIcon },
+  { name: "HTML", icon: htmlIcon },
+  { name: "JavaScript", icon: javascriptIcon },
+  { name: "Java", icon: javaIcon },
+  { name: "React", icon: reactIcon },
+  { name: "Spring Boot", icon: springBootIcon },
 ];
 
 const backendSkills = skills.filter((skill) =>
