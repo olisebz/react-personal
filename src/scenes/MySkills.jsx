@@ -1,10 +1,8 @@
+import SkillSet from "../components/SkillSet";
 import LineGradient from "../components/LineGradient";
-import SkillSetIcon from "../components/SkillSetIcon";
-import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 
 const MySkills = () => {
-  const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
     <section id="skills" className="pt-10 pb-24">
       {/* HEADER AND IMAGE SECTION */}
@@ -33,18 +31,18 @@ const MySkills = () => {
 
       {/* SKILLS */}
       <motion.div
-          className="flex mt-5 justify-center md:justify-start"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, x: -50 },
-            visible: { opacity: 1, x: 0 },
-          }}
-        >
-          <SkillSetIcon />
-        </motion.div>
+        className="flex mt-5 justify-center md:justify-start"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ delay: 0.4, duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, x: -50 },
+          visible: { opacity: 1, x: 0 },
+        }}
+      >
+        <SkillSet />
+      </motion.div>
     </section>
   );
 };
