@@ -22,10 +22,6 @@ const MySkills = () => {
             MY <span className="text-purple">SKILLS</span>
           </p>
           <LineGradient width="w-1/3" />
-          <p className="mt-10 mb-7">
-            Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
-            fames odio in at.
-          </p>
         </motion.div>
       </div>
 
