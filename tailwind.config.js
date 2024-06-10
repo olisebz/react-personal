@@ -12,6 +12,7 @@ module.exports = {
         green: "#4ade80",
         grey: "#ededed",
         purple: "#7c3aed",
+        "purple2": "#8b5af7",
         "dark-grey": "#757575",
         "opaque-black": "rgba(0,0,0,0.35)",
       },
