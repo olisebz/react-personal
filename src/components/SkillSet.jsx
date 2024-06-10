@@ -9,46 +9,48 @@ import springBootIcon from "../assets/skills/spring-boot.svg";
 import dockerIcon from "../assets/skills/docker.svg";
 import gitIcon from "../assets/skills/git.svg";
 import githubIcon from "../assets/skills/github.svg";
-import intellijIcon from "../assets/skills/intellij.svg";
-import jiraIcon from "../assets/skills/jira-software.svg";
 import mariadbIcon from "../assets/skills/mariadb.svg";
 import nodejsIcon from "../assets/skills/node-js.svg";
 import tailwindcssIcon from "../assets/skills/tailwind-css.svg";
-import vscodeIcon from "../assets/skills/vscode.svg";
+import mysqlIcon from "../assets/skills/mysql.svg";
+import figmaIcon from "../assets/skills/figma.svg";
+import gitlabIcon from "../assets/skills/gitlab.svg";
+import bootstrapIcon from "../assets/skills/bootstrap.svg";
 
 
 const skills = [
-  { name: "Angular", icon: angularIcon },
-  { name: "CSS", icon: cssIcon },
   { name: "HTML", icon: htmlIcon },
+  { name: "CSS", icon: cssIcon },
   { name: "JavaScript", icon: javascriptIcon },
-  { name: "Java", icon: javaIcon },
+  { name: "Angular", icon: angularIcon },
   { name: "React", icon: reactIcon },
+  { name: "Java", icon: javaIcon },
   { name: "Spring", icon: springBootIcon },
-  { name: "Docker", icon: dockerIcon },
+  { name: "Node.js", icon: nodejsIcon },
+  { name: "MySQL", icon: mysqlIcon },
+  { name: "MariaDB", icon: mariadbIcon },
   { name: "Git", icon: gitIcon },
   { name: "GitHub", icon: githubIcon },
-  { name: "IntelliJ", icon: intellijIcon },
-  { name: "Jira", icon: jiraIcon },
-  { name: "MariaDB", icon: mariadbIcon },
-  { name: "Node.js", icon: nodejsIcon },
+  { name: "GitLab", icon: gitlabIcon },
+  { name: "Docker", icon: dockerIcon },
   { name: "Tailwind", icon: tailwindcssIcon },
-  { name: "VS Code", icon: vscodeIcon },
+  { name: "Bootstrap", icon: bootstrapIcon },
+  { name: "Figma", icon: figmaIcon },
 ];
 
 const backendSkills = skills.filter((skill) =>
-  ["Java", "Spring", "Node.js"].includes(skill.name)
+  ["Java", "Spring", "Node.js", "MySQL","MariaDB"].includes(skill.name)
 );
 
 const frontendSkills = skills.filter((skill) =>
-  ["Angular", "CSS", "HTML", "JavaScript", "React"].includes(
+  ["HTML", "CSS",  "JavaScript","Angular", "React"].includes(
     skill.name
   )
 );
 
 const toolsSkills = skills.filter(
   (skill) =>
-    !["Java", "Spring", "Angular", "CSS", "HTML", "JavaScript", "React", "Node.js"].includes(
+    !["Java", "Spring", "Angular", "CSS", "HTML", "JavaScript", "React", "Node.js", "MySQL", "MariaDB"].includes(
       skill.name
     )
 );
