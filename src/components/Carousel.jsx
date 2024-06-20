@@ -45,19 +45,19 @@ const Carousel = () => {
                 visible: { opacity: 1, scale: 1 },
               }}
             >
-              <div className="bg-purple p-6 rounded-lg shadow-lg">
+              <div className="bg-purple-dark p-6 rounded-lg shadow-lg">
                 <h3 className="font-bold text-2xl mb-4">{project.title}</h3>
                 <img src={project.image} alt={project.title} className="rounded-t-lg w-full h-48 object-cover mb-4" />
-                <p className="text-black mb-4">{project.description}</p>
-                <a href={project.github} className="relative inline-block text-white bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 border-2 border-transparent rounded-full py-1 px-4 transition duration-500 ease-in-out transform hover:scale-110 hover:rotate-2 shadow-xl hover:shadow-2xl overflow-hidden border-white">
+                <p className="text-white mb-4">{project.description}</p>
+                <a href={project.github} className="relative inline-block text-white bg-gradient-to-r from-purple via-purple to-purple-dark border-2 border-transparent rounded-full py-1 px-4 transition duration-500 ease-in-out transform hover:scale-110 hover:rotate-2 shadow-xl hover:shadow-2xl overflow-hidden border-white">
                 <span className="absolute inset-0 bg-blue-700 opacity-0 transition duration-500 ease-in-out transform hover:opacity-100"></span>
                 <span className="relative z-10 font-bold text-sm tracking-wide">View Project</span>
-                <span className="absolute inset-0 rounded-full opacity-50 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 animate-gradient-x"></span>
+                <span className="absolute inset-0 rounded-full opacity-50 bg-gradient-to-r from-blue-500 via-purple to-blue-500 animate-gradient-x"></span>
                 <span className="absolute inset-0 border-4 border-blue-500 rounded-full opacity-0 animate-glow"></span>
                 </a>
                 <p className="text-white mt-2 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 p-2 rounded-md shadow-custom">
                   {project.tech.split(' ').map((tech, index) => (
-                    <span key={index} className="inline-block bg-purple2 bg-opacity-75 text-white px-3 py-1 rounded-full m-1 shadow-custom hover:bg-opacity-100 transition duration-300 ease-in-out transform hover:scale-105">
+                    <span key={index} className="inline-block bg-purple bg-opacity-75 text-white px-3 py-1 rounded-full m-1 shadow-custom hover:bg-opacity-100 transition duration-300 ease-in-out transform hover:scale-105">
                       {tech}
                     </span>
                   ))}

@@ -11,8 +11,9 @@ module.exports = {
         red: "#DC4492",
         green: "#4ade80",
         grey: "#ededed",
-        purple: "#7c3aed",
+        purple: "#6b34c8",
         "purple2": "#8b5af7",
+        "purple-dark": "#4a2491",
         "dark-grey": "#757575",
         "opaque-black": "rgba(0,0,0,0.35)",
       },
@@ -40,5 +41,7 @@ module.exports = {
       xl: "1700px",
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'), // Add this line to include the forms plugin which includes the backdrop-filter utilities
+  ],
 };
