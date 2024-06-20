@@ -20,12 +20,12 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
-  const navbarBackground = isTopOfPage ? "" : "bg-purple";
+  const navbarBackground = isTopOfPage ? "bg-transparent" : "bg-purple bg-opacity-70";
 
   return (
-    <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
+    <nav className={`z-40 w-full fixed top-0 py-6 ${isDesktop ? navbarBackground + ' backdrop-blur-lg' : 'bg-purple'} transition duration-500`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-        <h4 className="font-playfair text-3xl font-bold">OSZ</h4>
+        <h4 className="font-playfair text-3xl font-bold text-white">OSZ</h4>
 
         {/* DESKTOP NAV */}
         {isDesktop ? (
