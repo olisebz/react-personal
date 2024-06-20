@@ -42,6 +42,6 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/forms'), // Add this line to include the forms plugin which includes the backdrop-filter utilities
+    require('@tailwindcss/forms'),
   ],
 };
