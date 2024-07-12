@@ -6,7 +6,7 @@ const MySkills = () => {
   return (
     <section id="skills" className="pt-10 pb-24">
       {/* HEADER AND IMAGE SECTION */}
-      <div className="md:flex md:justify-between md:gap-16 mt-32">
+      <div className="flex flex-col items-center md:flex-row md:justify-between md:gap-16 mt-32">
         <motion.div
           className="md:w-1/3"
           initial="hidden"
@@ -30,8 +30,8 @@ const MySkills = () => {
         className="flex mt-5 justify-center md:justify-start"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ delay: 0.4, duration: 0.5 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ delay: 0.1, duration: 0.5 }}
         variants={{
           hidden: { opacity: 0, x: -50 },
           visible: { opacity: 1, x: 0 },
