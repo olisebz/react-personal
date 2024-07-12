@@ -17,7 +17,6 @@ import figmaIcon from "../assets/skills/figma.svg";
 import gitlabIcon from "../assets/skills/gitlab.svg";
 import bootstrapIcon from "../assets/skills/bootstrap.svg";
 
-
 const skills = [
   { name: "HTML", icon: htmlIcon },
   { name: "CSS", icon: cssIcon },
@@ -39,13 +38,11 @@ const skills = [
 ];
 
 const backendSkills = skills.filter((skill) =>
-  ["Java", "Spring", "Node.js", "MySQL","MariaDB"].includes(skill.name)
+  ["Java", "Spring", "Node.js", "MySQL", "MariaDB"].includes(skill.name)
 );
 
 const frontendSkills = skills.filter((skill) =>
-  ["HTML", "CSS",  "JavaScript","Angular", "React"].includes(
-    skill.name
-  )
+  ["HTML", "CSS", "JavaScript", "Angular", "React"].includes(skill.name)
 );
 
 const toolsSkills = skills.filter(
@@ -57,12 +54,12 @@ const toolsSkills = skills.filter(
 
 const SkillSet = () => {
   return (
-    <div className="flex justify-center space-x-10 py-10">
+    <div className="flex flex-col items-center space-y-10 py-10 md:flex-row md:space-x-10 md:space-y-0">
       <div className="text-center">
         <h2 className="text-2xl font-bold mb-4">Backend</h2>
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {backendSkills.map((skill, index) => (
-            <div key={index} className="flex flex-col items-center hover:bg-deep-blue-ligher rounded-lg p-4">
+            <div key={index} className="flex flex-col items-center rounded-lg p-4">
               <img src={skill.icon} alt={skill.name} className="w-16 h-16 mb-2" />
               <p className="text-lg font-medium">{skill.name}</p>
             </div>
@@ -71,9 +68,9 @@ const SkillSet = () => {
       </div>
       <div className="text-center">
         <h2 className="text-2xl font-bold mb-4">Frontend</h2>
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {frontendSkills.map((skill, index) => (
-            <div key={index} className="flex flex-col items-center hover:bg-deep-blue-ligher rounded-lg p-4">
+            <div key={index} className="flex flex-col items-center rounded-lg p-4">
               <img src={skill.icon} alt={skill.name} className="w-16 h-16 mb-2" />
               <p className="text-lg font-medium">{skill.name}</p>
             </div>
@@ -82,9 +79,9 @@ const SkillSet = () => {
       </div>
       <div className="text-center">
         <h2 className="text-2xl font-bold mb-4">Tools</h2>
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {toolsSkills.map((skill, index) => (
-            <div key={index} className="flex flex-col items-center hover:bg-deep-blue-ligher rounded-lg p-4">
+            <div key={index} className="flex flex-col items-center rounded-lg p-4">
               <img src={skill.icon} alt={skill.name} className="w-16 h-16 mb-2" />
               <p className="text-lg font-medium">{skill.name}</p>
             </div>
