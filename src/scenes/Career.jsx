@@ -15,7 +15,7 @@ const experiences = [
         location: "Zürich, Schweiz",
         description:
           "Fullstack-Entwickler im Triage-IT Team Einsatz von Angular und Typescript im Frontend Einsatz von Java und Spring Boot im Backend Arbeit als Scrum Master",
-        skills: ["Angular.js", "Typescript", "SDX", "Java", "Spring Boot"],
+        skills: ["Angular.js", "Typescript", "SDX", "Java", "Spring Boot", "Scrum"],
       },
       {
         title: "Backend im Team Xtendables",
@@ -24,6 +24,22 @@ const experiences = [
         description:
           "Einsatz von Solvatio in Backend-Prozessen im Smart Support. Erstellung von einfachen Stories arbeiten. Verwendung von Java und KBUnit-Tests",
         skills: ["Java", "KBUnit-Tests", "Solvatio", "Xtend"],
+      },
+      {
+        title: "Mitarbeit im Banking Umfeld beim Testing",
+        period: "Februar 2023 – August 2023",
+        location: "Zürich, Schweiz",
+        description:
+          "Management von 1200 Regressionstestfällen in JIRA Testfallautomatisierung mit UIPath",
+        skills: ["UiPath", "Jira"],
+      },
+      {
+        title: "Data Analyst B2B",
+        period: "August 2022 – Februar 2023",
+        location: "Zürich, Schweiz",
+        description:
+          "Remediation-Script erstellen mit PowerShell Aternity Recording business process monitoring Capacity management",
+        skills: ["PowerShell", "Bash", "Tableau", "Office 365"],
       },
     ],
   }
