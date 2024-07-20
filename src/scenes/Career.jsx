@@ -46,10 +46,25 @@ const experiences = [
 ];
 
 const Career = () => {
-  const [visiblePositions, setVisiblePositions] = useState(2);
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const handleShowMore = () => {
-    setVisiblePositions(prev => prev + 2);
+  const itemsPerPage = 2;
+  const totalPages = Math.ceil(experiences[0].positions.length / itemsPerPage);
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const positionsToShow = experiences[0].positions.slice(startIndex, endIndex);
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(prevPage => prevPage + 1);
+    }
+  };
+
+  const handlePreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(prevPage => prevPage - 1);
+    }
   };
 
   const swisscomExperience = experiences[0];
@@ -79,7 +94,7 @@ const Career = () => {
       </motion.div>
 
       {/* CAREER */}
-      <div className="mx-auto max-w-4xl px-4">
+      <div className="mx-auto max-w-4xl px-4 pb-10">
         <div className="mb-12">
           <div className="flex items-center mb-4">
             <img src={companyLogo} alt={swisscomExperience.company} className="w-10 h-10 mr-4" />
@@ -88,7 +103,7 @@ const Career = () => {
               <p className="text-gray-400">{swisscomExperience.role} · {swisscomExperience.duration}</p>
             </div>
           </div>
-          {swisscomExperience.positions.slice(0, visiblePositions).map((position, index) => (
+          {positionsToShow.map((position, index) => (
             <div key={index} className="mb-6 ml-14">
               <h4 className="text-lg font-semibold">{position.title}</h4>
               <p className="text-gray-400">{position.period}</p>
@@ -102,11 +117,22 @@ const Career = () => {
             </div>
           ))}
         </div>
-        {visiblePositions < swisscomExperience.positions.length && (
-          <button onClick={handleShowMore} className="text-blue-500 mt-6">
-            Alle Anzahl Berufserfahrungen anzeigen &rarr;
+        <div className="flex justify-between mt-6">
+          <button
+            onClick={handlePreviousPage}
+            disabled={currentPage === 1}
+            className="text-blue-500 disabled:text-gray-400"
+          >
+            &larr; Zurück
           </button>
-        )}
+          <button
+            onClick={handleNextPage}
+            disabled={currentPage === totalPages}
+            className="text-blue-500 disabled:text-gray-400"
+          >
+            Weiter &rarr;
+          </button>
+        </div>
       </div>
     </section>
   );
