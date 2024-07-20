@@ -15,7 +15,6 @@ import tailwindcssIcon from "../assets/skills/tailwind-css.svg";
 import mysqlIcon from "../assets/skills/mysql.svg";
 import figmaIcon from "../assets/skills/figma.svg";
 import gitlabIcon from "../assets/skills/gitlab.svg";
-import bootstrapIcon from "../assets/skills/bootstrap.svg";
 
 const skills = [
   { name: "HTML", icon: htmlIcon },
@@ -33,7 +32,6 @@ const skills = [
   { name: "GitLab", icon: gitlabIcon },
   { name: "Docker", icon: dockerIcon },
   { name: "Tailwind", icon: tailwindcssIcon },
-  { name: "Bootstrap", icon: bootstrapIcon },
   { name: "Figma", icon: figmaIcon },
 ];
 
