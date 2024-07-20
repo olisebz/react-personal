@@ -12,7 +12,6 @@ const experiences = [
       {
         title: "Fullstack im Team OppenSource",
         period: "Februar 2024 – Heute",
-        location: "Zürich, Schweiz",
         description: [
           "Fullstack-Entwickler im Triage-IT Team",
           "Einsatz von Angular und Typescript im Frontend",
@@ -24,7 +23,6 @@ const experiences = [
       {
         title: "Backend im Team Xtendables",
         period: "August 2023 – Februar 2024",
-        location: "Zürich, Schweiz",
         description: [
           "Einsatz von Solvatio in Backend-Prozessen im Smart Support",
           "Erstellung von einfachen Stories arbeiten",
@@ -35,7 +33,6 @@ const experiences = [
       {
         title: "Mitarbeit im Banking Umfeld beim Testing",
         period: "Februar 2023 – August 2023",
-        location: "Zürich, Schweiz",
         description: [
           "Management von 1200 Regressionstestfällen in JIRA",
           "Testfallautomatisierung mit UIPath"
@@ -45,7 +42,6 @@ const experiences = [
       {
         title: "Data Analyst B2B",
         period: "August 2022 – Februar 2023",
-        location: "Zürich, Schweiz",
         description: [
           "Remediation-Script erstellen mit PowerShell",
           "Aternity Recording business process monitoring",
@@ -119,7 +115,6 @@ const Career = () => {
             <div key={index} className="mb-6 ml-14">
               <h4 className="text-lg font-semibold">{position.title}</h4>
               <p className="text-gray-400">{position.period}</p>
-              <p className="text-gray-400 mb-2">{position.location}</p>
               <ul className="list-disc ml-6 mb-2">
                 {position.description.map((desc, idx) => (
                   <li key={idx} className="mb-1">{desc}</li>
