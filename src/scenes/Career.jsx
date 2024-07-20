@@ -128,18 +128,19 @@ const Career = () => {
             </div>
           ))}
         </div>
-        <div className="flex justify-between mt-6">
+        {/* Pagination Controls */}
+        <div className="flex justify-between items-center space-x-4 mt-6">
           <button
             onClick={handlePreviousPage}
             disabled={currentPage === 1}
-            className="text-blue-500 disabled:text-gray-400"
+            className={`px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md transition-colors duration-300 hover:bg-blue-600 disabled:bg-purple disabled:cursor-not-allowed`}
           >
             &larr; Zurück
           </button>
           <button
             onClick={handleNextPage}
             disabled={currentPage === totalPages}
-            className="text-blue-500 disabled:text-gray-400"
+            className={`px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md transition-colors duration-300 hover:bg-blue-600 disabled:bg-purple disabled:cursor-not-allowed`}
           >
             Weiter &rarr;
           </button>
