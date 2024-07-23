@@ -132,7 +132,7 @@ const Contact = () => {
             >
               SEND ME A MESSAGE
             </button>
-            <p>This Service is using <a href="https://formsubmit.co">FormSubmit</a></p>
+            <p className="mt-2 text-xs text-purple">This Service is using <a href="https://formsubmit.co">FormSubmit</a></p>
           </form>
         </motion.div>
       </div>
